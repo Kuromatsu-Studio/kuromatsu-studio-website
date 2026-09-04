@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Kuromatsu Studio</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">KUROMATSU</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>We build software<br>that <span style="color: var(--pine);">works</span>.</h1>
+      <p style="max-width: 32rem;">Based in Kampala, Uganda. Small team, fast delivery, no agency overhead. We build sites and tools for businesses that need results.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="contact.html" class="btn">Start a Project</a>
+        <a href="work.html" class="btn-outline">See Our Work</a>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="page">
+        <h2 class="section-title">What we do</h2>
+        <div class="grid-3">
+          <div class="benefit-card reveal">
+            <i class="ph ph-browser benefit-icon"></i>
+            <h3>Websites</h3>
+            <p>Professional sites for salons, shops, schools, and anyone who needs to look good online and be found by customers.</p>
+          </div>
+          <div class="benefit-card reveal delay-1">
+            <i class="ph ph-wrench benefit-icon"></i>
+            <h3>Custom Tools</h3>
+            <p>Internal systems that save you time, inventory trackers, booking systems, dashboards. Built to your exact needs.</p>
+          </div>
+          <div class="benefit-card reveal delay-2">
+            <i class="ph ph-rocket-launch benefit-icon"></i>
+            <h3>Launch & Support</h3>
+            <p>We handle setup, hosting, and keep things running. You focus on your business, we handle the tech.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="page">
+        <h2 class="section-title">How it works</h2>
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <span class="process-num">01</span>
+            <h3>Talk</h3>
+            <p>You tell us what you need. We listen. No charge, no pressure.</p>
+          </div>
+          <div class="process-step reveal delay-1">
+            <span class="process-num">02</span>
+            <h3>Plan</h3>
+            <p>We send a clear quote and timeline. You approve, we start.</p>
+          </div>
+          <div class="process-step reveal delay-2">
+            <span class="process-num">03</span>
+            <h3>Build</h3>
+            <p>We build it. You see progress weekly. We adjust as needed.</p>
+          </div>
+          <div class="process-step reveal delay-3">
+            <span class="process-num">04</span>
+            <h3>Launch</h3>
+            <p>We go live. You get the keys. We stay around if you need us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section">
+      <div class="page">
+        <h2 class="section-title">Pricing</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Transparent. No hidden fees. You know exactly what you're paying for.</p>
+        
+        <div class="grid-3">
+          <div class="pricing-card reveal">
+            <h3>Landing Page</h3>
+            <p class="pricing-desc">Up to 3 pages. Perfect for getting your business online fast.</p>
+            <div class="pricing-price">Custom Quote</div>
+            <ul class="pricing-features">
+              <li>Mobile-friendly</li>
+              <li>Contact form</li>
+              <li>2 revision rounds</li>
+            </ul>
+            <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Get Started</a>
+          </div>
+
+          <div class="pricing-card popular reveal delay-1">
+            <div class="popular-badge">Popular</div>
+            <h3>Full Website</h3>
+            <p class="pricing-desc">4+ pages. Everything you need to look professional and get customers.</p>
+            <div class="pricing-price">Custom Quote</div>
+            <ul class="pricing-features">
+              <li>Custom design</li>
+              <li>Google-friendly</li>
+              <li>Visitor tracking</li>
+              <li>3 revision rounds</li>
+            </ul>
+            <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Get Started</a>
+          </div>
+
+          <div class="pricing-card reveal delay-2">
+            <h3>Custom System</h3>
+            <p class="pricing-desc">Booking, inventory, dashboards — built exactly for your workflow.</p>
+            <div class="pricing-price">Custom Quote</div>
+            <ul class="pricing-features">
+              <li>Built around you</li>
+              <li>Secure login</li>
+              <li>Ongoing support</li>
+            </ul>
+            <a href="contact.html" class="btn-outline" style="width: 100%; text-align: center;">Discuss</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border); text-align: center;">
+      <div class="page">
+        <h2 class="section-title" style="margin-bottom: 1rem;">Ready to get started?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Tell us what you're building. We'll tell you if we can help.</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Kuromatsu Studio · Kampala, Uganda</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
