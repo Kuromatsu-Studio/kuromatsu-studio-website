@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Services | Kuromatsu Studio</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">KUROMATSU</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"><i class="ph ph-moon"></i></button></li>
+      </ul>
+    </nav>
+
+    <main class="page reveal">
+      <p class="label">Services</p>
+      <h1>What we offer & what it costs.</h1>
+      <p style="max-width: 40rem; margin-top: 1rem;">No hidden fees. No surprises. You know exactly what you're paying for before we start.</p>
+
+      <div class="grid-3" style="margin-top: 3rem;">
+        
+        <!-- Essential Landing Page -->
+        <div class="service-card reveal">
+          <h3>Essential Landing Page</h3>
+          <div class="service-price">Starting at 600,000 UGX</div>
+          <p class="service-for">Perfect for: Salons, barber shops, consultants, coaches, personal brands</p>
+          
+          <ul class="service-get">
+            <li>1–3 pages (Home, About, Contact)</li>
+            <li>Works perfectly on phones</li>
+            <li>WhatsApp chat button</li>
+            <li>Contact form to your email</li>
+            <li>Google Maps location embed</li>
+            <li>2 rounds of revisions</li>
+          </ul>
+          
+          <div class="service-gain">
+            <strong>What you gain:</strong> Customers find you online, trust you immediately, and reach out without you lifting a finger.
+          </div>
+          
+          <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Get Started</a>
+        </div>
+
+        <!-- Business Website -->
+        <div class="service-card popular reveal delay-1">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Business Website</h3>
+          <div class="service-price">Starting at 1,200,000 UGX</div>
+          <p class="service-for">Perfect for: Schools, clinics, restaurants, NGOs, law firms, real estate</p>
+          
+          <ul class="service-get">
+            <li>4–7 pages designed around you</li>
+            <li>Custom look matching your brand</li>
+            <li>Photo gallery or portfolio</li>
+            <li>Booking or appointment form</li>
+            <li>Google-friendly (shows up in search)</li>
+            <li>Visitor tracking included</li>
+            <li>WhatsApp integration</li>
+            <li>3 rounds of revisions</li>
+          </ul>
+          
+          <div class="service-gain">
+            <strong>What you gain:</strong> You look like the established choice. New customers discover you on Google instead of only through word-of-mouth.
+          </div>
+          
+          <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Get Started</a>
+        </div>
+
+        <!-- Custom System -->
+        <div class="service-card reveal delay-2">
+          <h3>Custom System</h3>
+          <div class="service-price">Starting at 2,000,000 UGX</div>
+          <p class="service-for">Perfect for: Businesses drowning in spreadsheets and manual work</p>
+          
+          <ul class="service-get">
+            <li>Built exactly for your workflow</li>
+            <li>Secure login for you and your team</li>
+            <li>Admin dashboard</li>
+            <li>Database to store your data safely</li>
+            <li>Works on phone and computer</li>
+            <li>Training session included</li>
+            <li>1 month of free support</li>
+          </ul>
+          
+          <div class="service-gain">
+            <strong>What you gain:</strong> Hours of your week back. Stop copying data between WhatsApp, Excel, and notebooks. Your business runs itself.
+          </div>
+          
+          <a href="contact.html" class="btn-outline" style="width: 100%; text-align: center;">Discuss Your Project</a>
+        </div>
+
+      </div>
+
+      <div class="cta-box" style="margin-top: 3rem;">
+        <h2>Not sure which one fits?</h2>
+        <p>Tell us what you're trying to do and we'll point you to the right package, or build something custom.</p>
+        <a href="contact.html" class="btn-outline" style="margin-top: 1rem;">Get in Touch</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Kuromatsu Studio · Kampala, Uganda</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

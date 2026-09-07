@@ -49,7 +49,7 @@ nav {
   font-weight: 800;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--text);
 }
 
 #menu-toggle {
@@ -94,11 +94,11 @@ nav {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(1.75rem, 6vw, 3rem);
   font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
-  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 .hero p {
@@ -738,5 +738,73 @@ html[data-theme="dark"] {
 }
 
 .theme-toggle:hover {
+  color: var(--pine);
+}
+
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
+.service-card {
+  position: relative;
+  padding: 2rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.service-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--pine);
+  margin-bottom: 0.5rem;
+}
+
+.service-for {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-get {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.service-get li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 0.35rem 0;
+}
+
+.service-get li::before {
+  content: "✓ ";
+  color: var(--pine);
+  font-weight: 700;
+}
+
+.service-gain {
+  background: var(--pine-dim);
+  border: 1px solid var(--pine-dark);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.service-gain strong {
   color: var(--pine);
 }

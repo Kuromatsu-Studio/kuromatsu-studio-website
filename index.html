@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Kuromatsu Studio</title>
@@ -14,28 +23,59 @@
       <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <!-- Light/dark toggle: defaults to the browser's own preference, main.js overrides it on click -->
         <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"><i class="ph ph-moon"></i></button></li>
-      </ul>
+      </ul>    
     </nav>
 
-    <!-- HERO -->
-    <div class="hero">
-      <h1>We build software<br>that <span style="color: var(--pine);">works</span>.</h1>
-      <p style="max-width: 32rem;">Based in Kampala, Uganda. Small team, fast delivery, no agency overhead. We build sites and tools for businesses that need results.</p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-        <a href="contact.html" class="btn">Start a Project</a>
+    <!-- HERO: Everything you need to know, immediately -->
+    <div class="hero" style="min-height: auto; padding-top: 8rem; padding-bottom: 4rem;">
+      <!-- Location / Team badge -->
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <span style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem;">
+          <i class="ph ph-map-pin" style="color: var(--pine);"></i> Kampala, Uganda
+        </span>
+        <span style="color: var(--border);">·</span>
+        <span style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem;">
+          <i class="ph ph-users" style="color: var(--pine);"></i> Team of 2
+        </span>
+      </div>
+
+      <h1>We build websites and software<br>that <span style="color: var(--pine);">grow your business</span>.</h1>
+      
+      <p style="max-width: 36rem; margin-bottom: 2rem;">
+        Kuromatsu Studio is a two-person software team based in Kampala. We work directly with you, no middlemen, no agency overhead, to build sites and tools that actually work.
+      </p>
+
+      <!-- CTAs -->
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
+        <a href="https://wa.me/256726081180" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="ph ph-whatsapp-logo"></i> Chat on WhatsApp
+        </a>
         <a href="work.html" class="btn-outline">See Our Work</a>
+      </div>
+
+      <!-- Trust points -->
+      <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; color: var(--text-muted); font-size: 0.875rem;">
+        <span style="display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i class="ph ph-check-circle" style="color: var(--pine);"></i> Direct communication
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i class="ph ph-check-circle" style="color: var(--pine);"></i> You own everything
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i class="ph ph-check-circle" style="color: var(--pine);"></i> Fast delivery
+        </span>
       </div>
     </div>
 
-    <!-- SERVICES -->
-    <section class="section">
+    <!-- SERVICES: Right there, impossible to miss -->
+    <section class="section" style="padding-top: 2rem;">
       <div class="page">
-        <h2 class="section-title">What we do</h2>
+        <h2 class="section-title" style="text-align: center;">What we do</h2>
         <div class="grid-3">
           <div class="benefit-card reveal">
             <i class="ph ph-browser benefit-icon"></i>
@@ -45,7 +85,7 @@
           <div class="benefit-card reveal delay-1">
             <i class="ph ph-wrench benefit-icon"></i>
             <h3>Custom Tools</h3>
-            <p>Internal systems that save you time, inventory trackers, booking systems, dashboards. Built to your exact needs.</p>
+            <p>Internal systems that save you time — inventory trackers, booking systems, dashboards. Built to your exact needs.</p>
           </div>
           <div class="benefit-card reveal delay-2">
             <i class="ph ph-rocket-launch benefit-icon"></i>
@@ -85,51 +125,13 @@
       </div>
     </section>
 
-    <!-- PRICING -->
+    <!-- SERVICES TEASER -->
     <section class="section">
-      <div class="page">
-        <h2 class="section-title">Pricing</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">Transparent. No hidden fees. You know exactly what you're paying for.</p>
-        
-        <div class="grid-3">
-          <div class="pricing-card reveal">
-            <h3>Landing Page</h3>
-            <p class="pricing-desc">Up to 3 pages. Perfect for getting your business online fast.</p>
-            <div class="pricing-price">Custom Quote</div>
-            <ul class="pricing-features">
-              <li>Mobile-friendly</li>
-              <li>Contact form</li>
-              <li>2 revision rounds</li>
-            </ul>
-            <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Get Started</a>
-          </div>
-
-          <div class="pricing-card popular reveal delay-1">
-            <div class="popular-badge">Popular</div>
-            <h3>Full Website</h3>
-            <p class="pricing-desc">4+ pages. Everything you need to look professional and get customers.</p>
-            <div class="pricing-price">Custom Quote</div>
-            <ul class="pricing-features">
-              <li>Custom design</li>
-              <li>Google-friendly</li>
-              <li>Visitor tracking</li>
-              <li>3 revision rounds</li>
-            </ul>
-            <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Get Started</a>
-          </div>
-
-          <div class="pricing-card reveal delay-2">
-            <h3>Custom System</h3>
-            <p class="pricing-desc">Booking, inventory, dashboards — built exactly for your workflow.</p>
-            <div class="pricing-price">Custom Quote</div>
-            <ul class="pricing-features">
-              <li>Built around you</li>
-              <li>Secure login</li>
-              <li>Ongoing support</li>
-            </ul>
-            <a href="contact.html" class="btn-outline" style="width: 100%; text-align: center;">Discuss</a>
-          </div>
-        </div>
+      <div class="page" style="text-align: center;">
+        <h2 class="section-title">Need something built?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Websites, tools, and systems, built for businesses in Uganda.</p>
+        <p style="color: var(--text-dim); font-size: 0.875rem; margin-bottom: 2rem;">Packages start at 600,000 UGX</p>
+        <a href="services.html" class="btn">See Services & Pricing</a>
       </div>
     </section>
 
@@ -138,7 +140,9 @@
       <div class="page">
         <h2 class="section-title" style="margin-bottom: 1rem;">Ready to get started?</h2>
         <p style="color: var(--text-muted); margin-bottom: 2rem;">Tell us what you're building. We'll tell you if we can help.</p>
-        <a href="contact.html" class="btn">Get in Touch</a>
+        <a href="https://wa.me/256726081180" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="ph ph-whatsapp-logo"></i> Chat on WhatsApp
+        </a>
       </div>
     </section>
 

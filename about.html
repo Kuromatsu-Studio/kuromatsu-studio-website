@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>About | Kuromatsu Studio</title>
@@ -14,12 +23,12 @@
       <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <!-- Light/dark toggle: defaults to the browser's own preference, main.js overrides it on click -->
         <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"><i class="ph ph-moon"></i></button></li>
-      </ul>
+      </ul>     
     </nav>
 
     <main class="page reveal">
@@ -30,35 +39,13 @@
         <div>
           <h2>Who we are</h2>
           <p>Kuromatsu Studio is a small software team based in Kampala, Uganda. We build websites and tools for local businesses and organizations who need reliable tech without the big-agency price tag.</p>
-          <p>You work directly with us — the people writing your code. No middlemen, no surprises.</p>
+          <p>You work directly with us, the people writing your code. No middlemen, no surprises.</p>
         </div>
 
         <div>
           <h2>How we work</h2>
           <p>We keep it simple. We talk, we plan, we build, we launch. You're involved at every step, and you own everything we make.</p>
           <p>If something breaks, we fix it. If you need changes later, we can handle that too.</p>
-        </div>
-      </div>
-
-      <div style="margin-top: 4rem;">
-        <h2 style="margin-bottom: 2rem;">The team</h2>
-        <div class="grid-2">
-          <div class="team-card reveal">
-            <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--pine-dim); border: 2px solid var(--pine-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-              <i class="ph ph-user" style="font-size: 1.75rem; color: var(--pine);"></i>
-            </div>
-            <h3 style="font-size: 1.125rem; font-weight: 700;">You</h3>
-            <p style="color: var(--text-dim); font-size: 0.875rem; margin-bottom: 0.5rem;">Co-Founder</p>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">[Your role — e.g., "Builds the backend and makes sure things don't break"]</p>
-          </div>
-          <div class="team-card reveal delay-1">
-            <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--pine-dim); border: 2px solid var(--pine-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-              <i class="ph ph-user" style="font-size: 1.75rem; color: var(--pine);"></i>
-            </div>
-            <h3 style="font-size: 1.125rem; font-weight: 700;">Your Friend</h3>
-            <p style="color: var(--text-dim); font-size: 0.875rem; margin-bottom: 0.5rem;">Co-Founder</p>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">[His role — e.g., "Designs the interface and handles client communication"]</p>
-          </div>
         </div>
       </div>
     </main>

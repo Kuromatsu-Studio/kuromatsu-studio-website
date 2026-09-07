@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Work | Kuromatsu Studio</title>
@@ -14,24 +23,38 @@
       <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <!-- Light/dark toggle: defaults to the browser's own preference, main.js overrides it on click -->
         <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"><i class="ph ph-moon"></i></button></li>
-      </ul>
+      </ul>    
     </nav>
 
     <main class="page reveal">
       <h1>Our Work</h1>
-      <p style="max-width: 40rem; margin-top: 1rem;">Projects we've built for clients and tools we've made for ourselves.</p>
+      <p style="max-width: 40rem; margin-top: 1rem;">Projects we've built for clients and tools we've shipped ourselves.</p>
 
-      <div style="margin-top: 4rem; padding: 4rem 2rem; text-align: center; border: 2px dashed var(--border); border-radius: 8px;">
-        <i class="ph ph-plant" style="font-size: 3rem; color: var(--pine); margin-bottom: 1rem;"></i>
-        <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Projects in the works</h2>
-        <p style="color: var(--text-muted); max-width: 28rem; margin: 0 auto 1.5rem;">We're currently building our portfolio. Check back soon, or get in touch to see what we're working on.</p>
-        <a href="contact.html" class="btn">Get in Touch</a>
+      <!-- Project grid -->
+      <div class="project-grid" style="margin-top: 3rem;">
+        
+        <!-- Logshare -->
+        <a href="https://logshare.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+            <span class="card-tag" style="background: var(--pine-dim); color: var(--pine);">Live</span>
+            <span class="card-tag" style="background: rgba(255,255,255,0.05); color: var(--text-muted); border-color: var(--border);">Tool</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Logshare</h3>
+          <p class="card-desc">Paste your logs, get a shareable link. Filter by severity, search keywords, and collaborate — no signup required. Links auto-expire in 24 hours.</p>
+          <span style="color: var(--pine); font-size: 0.875rem;">Visit Live Site <i class="ph ph-arrow-right"></i></span>
+        </a>
+
       </div>
+
+      <!-- More coming -->
+      <p style="text-align: center; color: var(--text-dim); margin-top: 3rem; font-size: 0.9rem;">
+        More projects in development. <a href="contact.html" style="color: var(--pine); text-decoration: underline;">Get in touch</a> to see what we're building.
+      </p>
     </main>
 
     <footer>

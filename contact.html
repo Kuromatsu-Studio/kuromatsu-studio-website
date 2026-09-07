@@ -2,8 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <script>
+  (function() {
+    console.log('Inline theme script running');
+    try {
+      var saved = localStorage.getItem('theme');
+      console.log('Theme from localStorage:', saved);
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        console.log('Set data-theme to:', saved);
+      } else {
+        console.log('No saved theme found');
+      }
+    } catch(e) {
+      console.error('Theme script failed:', e);
+    }
+  })();
+</script>    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Contact | Kuromatsu Studio</title>
   </head>
@@ -12,14 +31,14 @@
       <a href="index.html" class="logo">KUROMATSU</a>
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
-      <ul class="nav-links">
+            <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <!-- Light/dark toggle: defaults to the browser's own preference, main.js overrides it on click -->
         <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"><i class="ph ph-moon"></i></button></li>
-      </ul>
+      </ul>    
     </nav>
 
     <main class="page reveal">
@@ -27,15 +46,15 @@
       <p style="max-width: 40rem; margin-top: 1rem;">Have a project? A question? Just want to say hi? We reply fast.</p>
 
       <div class="contact-list" style="margin-top: 3rem;">
-        <a href="https://wa.me/256XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <a href="https://wa.me/256726081180" target="_blank" rel="noopener noreferrer" class="contact-item">
           <span class="contact-icon"><i class="ph ph-whatsapp-logo"></i></span>
           <div class="contact-info">
             <span class="contact-label">WhatsApp</span>
-            <span class="contact-value">+256 XXX XXX XXX</span>
+            <span class="contact-value">+256 726 081 180</span>
           </div>
         </a>
 
-        <a href="mailto:hello@blackpine.studio" class="contact-item">
+        <a href="kuromatsustudio@gmail.com" class="contact-item">
           <span class="contact-icon"><i class="ph ph-envelope"></i></span>
           <div class="contact-info">
             <span class="contact-label">Email</span>
@@ -47,14 +66,14 @@
           <span class="contact-icon"><i class="ph ph-phone"></i></span>
           <div class="contact-info">
             <span class="contact-label">Phone</span>
-            <span class="contact-value">+256 XXX XXX XXX</span>
+            <span class="contact-value">+256 783 476 053</span>
           </div>
         </a>
       </div>
 
       <div class="cta-box" style="margin-top: 3rem;">
         <h2>Not sure what you need?</h2>
-        <p>That's normal. Send us a quick WhatsApp message describing your problem and we'll tell you if we can help — no charge, no pressure.</p>
+        <p>That's normal. Send us a quick WhatsApp message describing your problem and we'll tell you if we can help, no charge, no pressure.</p>
       </div>
     </main>
 
